@@ -18,6 +18,10 @@
                 {{ $project->description }}
             </h6>
 
+            <h3>
+                Tipo: {{ $project->type ? $project->type->name : 'Nessun tipo'}}
+            </h3>
+
             @if ($project->img) 
                 <div>
                     <img src="{{ asset('storage/'.$project->img) }}" style="height: 200px;">

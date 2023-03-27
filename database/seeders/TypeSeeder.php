@@ -21,7 +21,7 @@ class TypeSeeder extends Seeder
             'News',
             'Recensioni',
             'Eventi',
-            'Off Topic'
+            'Off Topic',
         ];
         foreach ($types as $type) {
             $newType = Type::create([

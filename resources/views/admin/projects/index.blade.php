@@ -26,6 +26,7 @@
                         <th scope="col">Title</th>
                         <th scope="col">Description</th>
                         <th scope="col">Img</th>
+                        <th scope="col">Type</th>
                         <th scope='col'>Action</th>
                     </tr>
                 </thead>
@@ -36,6 +37,7 @@
                         <th scope="row">{{ $project->id }}</th>
                         <td>{{ $project->title }}</td>
                         <td>{{ $project->description }}</td>
+                        <td>{{ $project->type ? $project->type->name : 'Nessun tipo' }}
                         <td> {{ $project->img }}</td>
                         <td>
                             <a href=" {{ route('admin.projects.show', $project->id) }} " class="btn btn-info">

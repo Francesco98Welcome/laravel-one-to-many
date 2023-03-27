@@ -47,6 +47,18 @@
                 </div>
 
                 <div class="mb-3">
+                    <label for="type_id">
+
+                    </label>
+                    <select name="type_id" id="type_id" class="form-select">
+                        <option value="">Nessun tipo </option>
+                        @foreach ($types as $type)
+                            <option value="{{ $type->id }}" {{ old('type_id', $project->type_id) == $type->id ? 'selected' : '' }}>{{ $type->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+
+                <div class="mb-3">
                     <label for="img" class="form-label">Immagine in evidenza</label>
 
                     @if($project->img)
@@ -64,6 +76,7 @@
                             <img src=" {{ asset('storage/'.$project->img )}}" style="height: 200px;">
                         </div>
                     @endif 
+
                     <input type="file" 
                            name="img"
                            class="form-control" 
@@ -72,6 +85,7 @@
                            placeholder="Inserisci l'immagine in evidenza..">
 
                 <div>
+
                     <button type="submit" class="btn btn-warning">
                         Aggiorna
                     </button>
