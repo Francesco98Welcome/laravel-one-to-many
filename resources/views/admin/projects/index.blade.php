@@ -25,8 +25,8 @@
                         <th scope="col">ID</th>
                         <th scope="col">Title</th>
                         <th scope="col">Description</th>
-                        <th scope="col">Img</th>
                         <th scope="col">Type</th>
+                        <th scope="col">Img</th>
                         <th scope='col'>Action</th>
                     </tr>
                 </thead>
